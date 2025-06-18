@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Materi Ajar 2: Membaca Suku Kata Bahasa Arab</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Times+New+Roman&display=swap" rel="stylesheet">
+    <style>
+        /* Define CSS Variables for easy theme management */
+        :root {
+            --primary-color: #003366; /* Dark blue for main headings */
+            --secondary-color: #004080; /* Slightly lighter blue for subheadings and highlights */
+            --accent-color: #ffeb3b; /* Yellow for note border */
+            --background-light: #f9f9f9; /* Light background for the page */
+            --background-note: #fffbcc; /* Light yellow background for notes */
+            --border-color: #ccc; /* Light grey for borders */
+            --table-header-bg: #e6f0ff; /* Light blue for table headers */
+            --shadow-color: rgba(0,0,0,0.1); /* Subtle shadow color */
+        }
+
+        body {
+            font-family: 'Times New Roman', serif; /* Fallback to generic serif */
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.7; /* Slightly increased line height for better readability */
+            background-color: var(--background-light);
+            padding: 25px; /* Slightly increased padding */
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 4px 15px var(--shadow-color); /* Enhanced shadow */
+            color: #333; /* Darker text color for better contrast */
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            font-family: 'IBM Plex Sans Arabic', sans-serif; /* Modern, clean font for headings */
+            text-align: center; /* Center align headings */
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed var(--border-color); /* Subtle dashed border */
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-top: 25px;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ol, ul {
+            margin-left: 25px; /* Slightly more indent for lists */
+            margin-bottom: 15px;
+            padding-left: 0; /* Reset default padding */
+        }
+
+        ol li, ul li {
+            margin-bottom: 8px; /* Space between list items */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate; /* Use separate to allow border-spacing */
+            border-spacing: 0; /* Remove default spacing */
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Subtle shadow for tables */
+            border-radius: 8px; /* Rounded corners for the table */
+            overflow: hidden; /* Ensures rounded corners apply to content */
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 15px; /* More padding in table cells */
+            text-align: center;
+            vertical-align: middle; /* Center content vertically */
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            color: var(--primary-color);
+            font-weight: bold;
+            text-transform: uppercase; /* Uppercase table headers */
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f0f6fc; /* Light blue stripe for even rows */
+        }
+
+        .note {
+            background-color: var(--background-note);
+            padding: 15px;
+            border-left: 5px solid var(--accent-color); /* Thicker border */
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px; /* Rounded corners for notes */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .note ul {
+            list-style: disc; /* Ensure bullet points are visible */
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .note li {
+            margin-bottom: 5px;
+        }
+
+        .highlight {
+            font-weight: 700; /* Use numerical value for font-weight */
+            color: var(--secondary-color);
+            background-color: #e0f2f7; /* Light background for highlights */
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block; /* To apply padding properly */
+        }
+
+        .arabic-letters-display {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 1.5em; /* Larger font for Arabic characters */
+            direction: rtl; /* Right-to-left for Arabic text */
+            text-align: center; /* Center align the display */
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .arabic-suku-kata {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-size: 1.4em;
+            direction: rtl;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            line-height: 2; /* More space between lines of suku kata */
+        }
+
+        .arabic-suku-kata li {
+            text-align: left; /* Align list items to the left */
+        }
+
+        .exercise-prompt {
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        strong {
+            color: var(--primary-color); /* Make strong text more prominent */
+        }
+    </style>
+</head>
+<body>
+    <h1>Materi Ajar 2: Membaca Suku Kata Bahasa Arab</h1>
+    <hr />
+
+    <h2>A. Tujuan Pembelajaran</h2>
+    <p>Setelah mengikuti pembelajaran ini, siswa diharapkan mampu:</p>
+    <ol>
+        <li>Mengidentifikasi huruf hijaiyah yang membentuk suku kata.</li>
+        <li>Mengucapkan suku kata bahasa Arab dengan benar (bunyi huruf dan harakat).</li>
+        <li>Membedakan jenis harakat (fathah, kasrah, dammah).</li>
+        <li>Membaca gabungan suku kata sederhana dengan percaya diri.</li>
+        <li>Menggunakan pola tanya jawab untuk memperkuat hafalan dan pemahaman.</li>
+    </ol>
+
+    <h2>B. Materi Pembelajaran</h2>
+
+    <h3>1. Huruf Hijaiyah (مفردات الحروف)</h3>
+    <p>Contoh huruf yang digunakan:</p>
+    <p class="arabic-letters-display">
+        ب، ت، ث، ن، م، ك، ل، س، ص، ع
+    </p>
+
+    <h3>2. Harakat (حركات)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Harakat</th>
+                <th>Simbol</th>
+                <th>Bunyi</th>
+                <th>Contoh</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Fathah</td><td>َ</td><td>a</td><td>بَ (ba)</td></tr>
+            <tr><td>Kasrah</td><td>ِ</td><td>i</td><td>بِ (bi)</td></tr>
+            <tr><td>Dammah</td><td>ُ</td><td>u</td><td>بُ (bu)</td></tr>
+        </tbody>
+    </table>
+
+    <h3>3. Suku Kata (مقاطع)</h3>
+    <p>Suku kata dasar (huruf + harakat):</p>
+    <p class="arabic-suku-kata" style="direction: ltr;">
+        بَ (ba), تَ (ta), نِ (ni), مِ (mi), كُ (ku), لُ (lu)
+    </p>
+    <p>Gabungan suku kata pendek:</p>
+    <ul class="arabic-suku-kata" style="list-style: none; padding-left: 0;">
+        <li>بَ + تَ = بَتَ</li>
+        <li>كَ + مِ = كَمِ</li>
+        <li>سُ + لَ = سُلَ</li>
+    </ul>
+
+    <h2>C. Latihan</h2>
+
+    <h3 class="exercise-prompt">Latihan 1: Baca suku kata berikut ini!</h3>
+    <ol class="arabic-suku-kata">
+        <li>بَ</li>
+        <li>تِ</li>
+        <li>كُ</li>
+        <li>نَ</li>
+        <li>سِ</li>
+    </ol>
+
+    <h3 class="exercise-prompt">Latihan 2: Gabungkan dan baca!</h3>
+    <ol class="arabic-suku-kata">
+        <li>بَ + كَ = ؟</li>
+        <li>سُ + مَ = ؟</li>
+        <li>تَ + نِ = ؟</li>
+    </ol>
+
+    <h3 class="exercise-prompt">Latihan 3:</h3>
+    <ul>
+        <li>Huruf apa yang ada dalam suku kata ini: بَ ؟</li>
+        <li>Apa nama harakat yang membuat bunyi “a” dalam bahasa Arab?</li>
+        <li>Bagaimana cara membaca suku kata كِ ؟</li>
+        <li>Suku kata mana yang kamu sukai untuk dibaca? Kenapa?</li>
+        <li>Bisakah kamu membaca gabungan beberapa suku kata ini: بِ كَ مَ ؟</li>
+    </ul>
+
+    <h2>D. Evaluasi Pembelajaran</h2>
+    <p><strong>Bentuk Evaluasi:</strong></p>
+    <ul>
+        <li>Lisan: Siswa membaca suku kata secara individu.</li>
+        <li>Tanya jawab: Guru mengajukan suku kata, siswa menjawab.</li>
+        <li>Tulis (opsional): Siswa menuliskan kembali huruf dan harakat.</li>
+    </ul>
+
+    <p><strong>Indikator Keberhasilan:</strong></p>
+    <ul>
+        <li>Siswa dapat membaca minimal 5 suku kata dengan benar.</li>
+        <li>Siswa menunjukkan keberanian bertanya dan menjawab.</li>
+        <li>Siswa memahami perbedaan bunyi a–i–u.</li>
+    </ul>
+
+</body>
+</html>
