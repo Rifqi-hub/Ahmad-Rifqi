@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Rifqi Personal Website</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for easy theme management */
+        :root {
+            --primary-color: #003366; /* Dark blue for main elements */
+            --secondary-color: #0056b3; /* Slightly lighter, more vibrant blue for accents */
+            --text-color: #333; /* Dark grey for body text */
+            --light-bg-color: #f0f2f5; /* Lighter, subtle background */
+            --border-color: #ddd; /* Light grey border */
+            --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow */
+            --accent-green: #28a745; /* For success/download buttons */
+        }
+
+        /* Basic Reset & Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg-color);
+            color: var(--text-color);
+            line-height: 1.7; /* Slightly increased line height for readability */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Container for main content */
+        .container {
+            max-width: 960px;
+            margin: 30px auto; /* More margin top/bottom */
+            padding: 20px 30px; /* More horizontal padding */
+            background-color: #fff;
+            border-radius: 12px; /* Slightly more rounded corners */
+            box-shadow: 0 8px 30px var(--shadow-light); /* More prominent shadow */
+            animation: fadeIn 1s ease-out; /* Fade in animation */
+        }
+
+        /* Animation for container */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Bar */
+        nav {
+            text-align: center;
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            box-shadow: 0 4px 10px var(--shadow-light);
+            margin-bottom: 30px; /* Increased margin */
+            border-radius: 8px; /* Rounded corners for nav */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 25px; /* More padding for links */
+            margin: 0 8px;
+            border-radius: 50px; /* Pill-shaped buttons */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 500; /* Medium weight font */
+            letter-spacing: 0.5px;
+            display: inline-block; /* Allows transform */
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px) scale(1.02); /* More pronounced hover effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Horizontal Rule */
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 40px 0; /* More spacing */
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 20px 0 40px; /* More bottom padding */
+            position: relative;
+            z-index: 1;
+        }
+
+        header img {
+            width: 180px; /* Slightly smaller for balance */
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid var(--secondary-color); /* Thicker border */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            object-fit: cover;
+            transition: transform 0.4s ease, border-color 0.3s ease;
+        }
+        header img:hover {
+            transform: scale(1.1); /* More zoom on hover */
+            border-color: var(--primary-color);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 3.2em; /* Larger font size */
+            margin: 20px 0 10px;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        header p {
+            color: #555;
+            font-size: 1.2em; /* Slightly larger text */
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* Article Section */
+        article {
+            text-align: center;
+            padding: 30px 0; /* More padding */
+            margin-bottom: 40px;
+        }
+
+        article h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+            font-size: 2.4em; /* Larger heading */
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px; /* Space for underline */
+        }
+
+        article h2::after {
+            content: '';
+            position: absolute;
+            width: 80px; /* Shorter, more focused underline */
+            height: 3px; /* Thicker underline */
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* Center the underline */
+            border-radius: 2px;
+        }
+
+        article p {
+            font-size: 1.15em; /* Slightly larger text */
+            max-width: 750px; /* Wider paragraph */
+            margin: 0 auto;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* Table Section */
+        .table-container {
+            max-width: 750px; /* Wider table container */
+            margin: 3em auto;
+            padding: 15px; /* More padding */
+            border: 1px solid var(--border-color);
+            border-radius: 10px; /* Slightly more rounded */
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+            background-color: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate; /* Allows border-radius on cells */
+            border-spacing: 0; /* No space between cells */
+            font-size: 1.05em;
+        }
+
+        table thead tr {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 1.15em;
+        }
+
+        table th, table td {
+            padding: 15px 20px; /* More padding */
+            border-bottom: 1px solid var(--border-color); /* Only bottom border */
+            text-align: left;
+        }
+        /* Top border for first row, no top border for others */
+        table tr:first-child th {
+            border-top: none;
+        }
+
+        table th {
+            text-transform: uppercase;
+            letter-spacing: 0.08em; /* More letter spacing */
+            font-weight: 700;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f8f8f8; /* Lighter stripe */
+        }
+
+        table tbody tr:hover {
+            background-color: #e6f7ff; /* Lighter hover background */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        table ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        table ul li {
+            padding: 8px 0; /* More vertical padding for list items */
+            position: relative;
+            padding-left: 25px; /* More space for bullet */
+        }
+
+        table ul li::before {
+            content: '✓'; /* Checkmark bullet point for a positive feel */
+            color: var(--accent-green); /* Green color for checkmark */
+            font-size: 1.3em;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%); /* Center vertically */
+            font-weight: bold;
+        }
+
+        /* Download Button Styling */
+        .download-button {
+            display: inline-block;
+            background-color: var(--accent-green); /* Green for download */
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 30px;
+            margin: 20px auto; /* Centered with auto margin */
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-button:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 0; /* More padding */
+            margin-top: 40px; /* More top margin */
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 1em;
+            border-radius: 0 0 12px 12px; /* Rounded bottom corners for container */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            nav a {
+                padding: 8px 15px;
+                margin: 0 3px;
+                font-size: 0.95em;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header img {
+                width: 150px;
+                height: 150px;
+            }
+            article h2 {
+                font-size: 2em;
+            }
+            article p {
+                font-size: 1.05em;
+            }
+            table th, table td {
+                padding: 12px 15px;
+            }
+            .download-button {
+                padding: 10px 25px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px 0;
+            }
+            nav a {
+                display: block;
+                margin: 8px auto; /* Center links when stacked */
+                width: 80%; /* Make them take more width */
+                max-width: 250px;
+                font-size: 0.9em;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            article h2 {
+                font-size: 1.7em;
+            }
+            article p {
+                font-size: 1em;
+            }
+            .table-container {
+                padding: 10px;
+            }
+            table th, table td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+            table ul li {
+                padding: 6px 0;
+                padding-left: 20px;
+            }
+            table ul li::before {
+                font-size: 1.1em;
+            }
+            footer {
+                padding: 15px 0;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#skills">Skills & Experience</a>
+        </nav>
+
+        <hr />
+
+        <header>
+            <img src="image/download.jpg" width="200" height="200" alt="Ahmad Rifqi Profile Picture" />
+            <h1>Ahmad Rifqi</h1>
+            <p>(Metode Hattaiyah: Rahasia Belajar Efektif dan Cepat)</p>
+        </header>
+
+        <hr />
+
+        <article id="overview">
+            <h2>Overview</h2>
+            <p>
+                Temukan Cara Belajar yang Lebih Cerdas, Bukan Lebih Lama.<br>
+                Dengan Metode Hattaiyah, kami percaya bahwa setiap orang bisa belajar lebih efektif,<br>
+                fokus, dan terarah tanpa stres berlebihan.<br>
+                Kursus ini dirancang untuk membantu kamu memahami materi dengan lebih cepat,<br>
+                mempertahankan informasi lebih lama, dan membangun kebiasaan belajar yang konsisten.
+            </p>
+        </article>
+
+        <hr />
+
+        <div class="table-container" id="skills">
+            <h2>Skill & Pengalaman</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Pengalaman</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Pengenalan Huruf Arab</li>
+                                <li>Membaca Suku Kata Bahasa Arab</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Belajar yang Terarah & Terstruktur</li>
+                                <li>Belajar yang Menyenangkan & Interaktif</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+ 	<nav>
+            <a href="1.html">Materi Ajar 1</a>
+            <a href="2.html">Materi Ajar 2</a>
+        </nav>
+        <hr>
+
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="cv-kursus metode hattaiyah.pdf" download class="download-button">Unduh Brosur Metode Hattaiyah</a>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; 2025 Ahmad Rifqi. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
